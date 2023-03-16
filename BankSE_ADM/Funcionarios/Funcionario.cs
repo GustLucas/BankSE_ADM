@@ -27,5 +27,7 @@ namespace BankSE_ADM.Funcionarios
         public abstract double GetBonificacao();
 
         public abstract void AumentaSalario();
+
+        
     }
 }

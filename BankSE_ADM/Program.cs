@@ -1,4 +1,5 @@
 ﻿using BankSE_ADM.Funcionarios;
+using BankSE_ADM.SistemaInterno;
 using BankSE_ADM.Utilitario;
 
 #region
@@ -34,7 +35,8 @@ using BankSE_ADM.Utilitario;
 //Console.WriteLine("novo salario roberta:" + roberta.Salario);
 #endregion
 
-CalcularBonificacao();
+//CalcularBonificacao();
+UsarSistema();
 
 void CalcularBonificacao()
 {
@@ -59,4 +61,21 @@ void CalcularBonificacao()
 
     Console.WriteLine("Total de funcionarios: " + Funcionario.TotalFuncionarios);
     Console.WriteLine("Total de Bonificação: " + gerenciador.TotalBonificacao);
+
+}
+
+void UsarSistema()
+{
+    SistemaInterno sistema = new SistemaInterno();
+
+    Diretor ingrid = new Diretor("34244321");
+    ingrid.Nome = "Ingrid Novaes";
+    ingrid.Senha = "123";
+
+    GerenteContas ursula = new GerenteContas("34343432");
+    ursula.Nome = "Ursula Acantara";
+    ursula.Senha = "321";
+
+    sistema.Logar(ingrid, "123");
+    sistema.Logar(ursula, "943");
 }
