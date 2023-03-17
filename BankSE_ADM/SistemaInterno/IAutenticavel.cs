@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 
 namespace BankSE_ADM.SistemaInterno
 {
-    public abstract class Autenticavel : Funcionario
+    public interface IAutenticavel
     {
         public string Senha { get; set; }
-        public abstract bool Autenticar(string senha);
+        public bool Autenticar(string senha);
+       
 
-        public Autenticavel(string cpf, double salario) : base(cpf, salario)
-        {
-        }
 
     }
 }

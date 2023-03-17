@@ -1,4 +1,5 @@
 ﻿using BankSE_ADM.Funcionarios;
+using BankSE_ADM.Parceria;
 using BankSE_ADM.SistemaInterno;
 using BankSE_ADM.Utilitario;
 
@@ -76,6 +77,13 @@ void UsarSistema()
     ursula.Nome = "Ursula Acantara";
     ursula.Senha = "321";
 
+    ParceiroComercial caio = new ParceiroComercial();
+    caio.Senha = "666";
+
+
     sistema.Logar(ingrid, "123");
     sistema.Logar(ursula, "943");
+    sistema.Logar(caio, "666");
+
+
 }

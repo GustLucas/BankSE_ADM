@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 namespace BankSE_ADM.Funcionarios
 {
     // :Funcionario para dizer que a classe diretor é do tipo funcionario 
-    public class Diretor : Autenticavel
+    public class Diretor : FuncionarioAutenticavel
     {
+
         // override para dizer que o metodo é sobrescrito
         public override double GetBonificacao()
         {
@@ -24,11 +25,6 @@ namespace BankSE_ADM.Funcionarios
         public override void AumentaSalario()
         {
             this.Salario *= 1.15; // aumenta o salario em 15%
-        }
-
-        public override bool Autenticar(string senha)
-        {
-            return this.Senha == senha;
         }
     }
 }

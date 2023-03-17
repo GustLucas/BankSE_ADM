@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace BankSE_ADM.Funcionarios
 {
-    public class GerenteContas:Autenticavel
+    public class GerenteContas:FuncionarioAutenticavel
     {
-
         public GerenteContas(string cpf):base(cpf, 4000)
         {
             Console.WriteLine("Criando um Gerente de contas...");
@@ -21,10 +20,6 @@ namespace BankSE_ADM.Funcionarios
         public override void AumentaSalario()
         {
             this.Salario *= 1.05; // aumenta o salario em 15%
-        }
-        public override bool Autenticar(string senha)
-        {
-            return this.Senha == senha;
         }
     }
 }
